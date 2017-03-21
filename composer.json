@@ -2,6 +2,7 @@
     "name": "rklandesverband/yii2-imagecroplv",
     "description": "Image Crop LV",
     "type": "yii2-extension",
+    "minimum-stability": "dev",
     "keywords": ["yii2","extension"],
     "license": "GPL-2.0+",
     "authors": [
