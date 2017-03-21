@@ -1,0 +1,21 @@
+{
+    "name": "rklandesverband/yii2-imagecroplv",
+    "description": "Image Crop LV",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension"],
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Ian Schneider",
+            "email": "ian.schneider@n.roteskreuz.at"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "rklandesverand\\": ""
+        }
+    }
+}
