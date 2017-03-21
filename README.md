@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Image Crop LV
 =============
 Image Crop LV
@@ -29,3 +30,7 @@ Once the extension is installed, simply use it in your code by  :
 
 ```php
 <?= \rklandesverand\AutoloadExample::widget(); ?>```
+=======
+# yii2-imagecroplv
+Crop Image LV NOE
+>>>>>>> b87e1f4beaa9c84252b19f7b8f3a02fd667ba444
