@@ -14,8 +14,7 @@
     "minimum-stability": "stable",
     "require": {
         "yiisoft/yii2": "*",
-        "bower-asset/jquery": ">=1.11.*",
-         "yiisoft/yii2-bootstrap": "*"
+        "yiisoft/yii2-bootstrap": "*"
     },
     "autoload": {
         "psr-4": {
