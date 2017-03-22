@@ -1,7 +1,10 @@
 {
+     // package name
     "name": "rklandesverband/yii2-imagecroplv",
-    "description": "Image Crop LV",
+    "description": "Image Crop Landesverband NÖ",
+    // package type
     "type": "yii2-extension",
+    "desrcription": "Image Upload und crop für yii2",
     "version": "1.0",
     "keywords": ["yii2","extension"],
     "license": "BSD 3-Clause",
@@ -11,8 +14,9 @@
             "email": "ian.schneider@n.roteskreuz.at"
         }
     ],
-    "minimum-stability": "dev",
+    // package dependencies
     "require": {
+        "yiisoft/yii2": "~2.0.0",
         "php": ">=5.3.2",
         "yiisoft/yii2-bootstrap": "*"
     },
