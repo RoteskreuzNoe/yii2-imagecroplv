@@ -1,7 +1,6 @@
-<<<<<<< HEAD
+
 Image Crop LV
 =============
-Image Crop LV
 
 [![Minimum PHP Version](http://img.shields.io/badge/php-%3E%3D%205.3-8892BF.svg)](https://php.net/)
 [![Latest Stable Version](https://poser.pugx.org/bilginnet/yii2-cropper/v/stable)](https://packagist.org/packages/bilginnet/yii2-cropper)
@@ -51,4 +50,3 @@ Once the extension is installed, simply use it in your code by  :
 =======
 # yii2-imagecroplv
 Crop Image LV NOE
->>>>>>> b87e1f4beaa9c84252b19f7b8f3a02fd667ba444

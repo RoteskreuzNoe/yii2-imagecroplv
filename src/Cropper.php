@@ -1,6 +1,6 @@
 <?php
 
-namespace bilginnet\cropper;
+namespace imagecroplv\cropper;
 
 
 use Yii;
@@ -21,7 +21,7 @@ class Cropper extends InputWidget
      * preview false | array  // default false
      *     [
      *          url @url      // set in update action // automatically will be set after crop
-     *          width int     // default 100
+     *          width int     // default 160
      *          height int    // default height by aspectRatio
      *     ]
      *
@@ -87,7 +87,7 @@ class Cropper extends InputWidget
 
         $aspectRatio = $options['width'] / $options['height'];
         if (!isset($options['preview']['url'])) $options['preview']['url'] = null;
-        if (!isset($options['preview']['width'])) $options['preview']['width'] = 100;
+        if (!isset($options['preview']['width'])) $options['preview']['width'] = 160;
         if (!isset($options['preview']['height'])) $options['preview']['height'] = $options['preview']['width'] / $aspectRatio;
 
 
