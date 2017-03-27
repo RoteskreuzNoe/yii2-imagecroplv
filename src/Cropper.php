@@ -1,6 +1,6 @@
 <?php
 
-namespace imagecroplv\cropper;
+namespace rklandesverband\imagecroplv;
 
 
 use Yii;
@@ -32,7 +32,7 @@ class Cropper extends InputWidget
      *          close
      *     ]
      *
-     * @var $cropperOptions []
+     * @var $cropperOptions []<
      *
      */
     public $cropperOptions;

@@ -8,7 +8,7 @@ use yii\web\View;
 /** @var $cropperOptions mixed */
 /** @var $inputOptions  mixed */
 
-
+//imagecroplv\CropperAsset::register($this);
 \imagecroplv\cropper\CropperAsset::register($this);
 
 
