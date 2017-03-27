@@ -9,7 +9,7 @@ use yii\web\View;
 /** @var $inputOptions  mixed */
 
 //imagecroplv\CropperAsset::register($this);
-\imagecroplv\cropper\CropperAsset::register($this);
+rklandesverband\imagecroplv\CropperAsset::register($this);
 
 
 $unique = uniqid('cropper_');
