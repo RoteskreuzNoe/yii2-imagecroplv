@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "rklandesverand\\imagecroplv\\": "src/"
+            "rklandesverband\\imagecroplv\\": "src/"
         }
     }
 }
