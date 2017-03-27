@@ -1,7 +1,7 @@
 <?php
 
 namespace rklandesverband\imagecroplv;
-
+ 
 
 use Yii;
 use yii\base\InvalidConfigException;
