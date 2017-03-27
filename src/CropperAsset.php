@@ -1,6 +1,6 @@
 <?php
 
-namespace imagecroplv\cropper;
+namespace rklandesverband\imagecroplv;
 
 
 use yii\web\AssetBundle;
