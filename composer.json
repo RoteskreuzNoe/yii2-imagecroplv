@@ -2,7 +2,7 @@
     "name": "rklandesverband/yii2-imagecroplv",
     "description": "Image Crop Landesverband NÖ, Image Upload und crop für yii2",
     "type": "yii2-extension",
-    "version": "1.1.0",
+    "version": "2.0.0",
     "keywords": ["yii2", "extension"],
     "license": "BSD 3-Clause",
     "authors": [
