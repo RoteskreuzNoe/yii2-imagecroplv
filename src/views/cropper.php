@@ -20,7 +20,7 @@ $cropHeight = $cropperOptions['height'];
 $aspectRatio = $cropWidth / $cropHeight;
 
 
-
+die('asdf');
 
 
 
