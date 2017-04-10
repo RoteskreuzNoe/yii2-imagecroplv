@@ -2,11 +2,10 @@
 Image Crop LV
 =============
 
-[![Minimum PHP Version](http://img.shields.io/badge/php-%3E%3D%205.3-8892BF.svg)](https://php.net/)
-[![Latest Stable Version](https://poser.pugx.org/bilginnet/yii2-cropper/v/stable)](https://packagist.org/packages/bilginnet/yii2-cropper)
-[![Total Downloads](https://poser.pugx.org/bilginnet/yii2-cropper/downloads)](https://packagist.org/packages/bilginnet/yii2-cropper)
-[![Latest Unstable Version](https://poser.pugx.org/bilginnet/yii2-cropper/v/unstable)](https://packagist.org/packages/bilginnet/yii2-cropper)
-[![License](https://poser.pugx.org/bilginnet/yii2-cropper/license)](https://packagist.org/packages/bilginnet/yii2-cropper)
+[![Latest Stable Version](https://poser.pugx.org/rklandesverband/yii2-imagecroplv/version)](https://packagist.org/packages/rklandesverband/yii2-imagecroplv)
+[![Total Downloads](https://poser.pugx.org/rklandesverband/yii2-imagecroplv/downloads)](https://packagist.org/packages/rklandesverband/yii2-imagecroplv)
+[![Latest Unstable Version](https://poser.pugx.org/rklandesverband/yii2-imagecroplv/v/unstable)](//packagist.org/packages/rklandesverband/yii2-imagecroplv)
+[![License](https://poser.pugx.org/rklandesverband/yii2-imagecroplv/license)](https://packagist.org/packages/rklandesverband/yii2-imagecroplv)
 
 <a href="https://fengyuanchen.github.io/cropper/" target="_blank">Cropper.js</a> - Bootstrap Cropper (recommended) (included already).
 
