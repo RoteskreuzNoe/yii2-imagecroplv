@@ -19,11 +19,6 @@ $cropWidth = $cropperOptions['width'];
 $cropHeight = $cropperOptions['height'];
 $aspectRatio = $cropWidth / $cropHeight;
 
-
-die('asdf');
-
-
-
 $browseLabel = $cropperOptions['icons']['browse'] . ' ' . Yii::t('cropper', 'Browse');
 $cropLabel = $cropperOptions['icons']['crop'] . ' ' . Yii::t('cropper', 'Crop');
 $closeLabel = $cropperOptions['icons']['close'] . ' ' . Yii::t('cropper', 'Crop') . ' & ' . Yii::t('cropper', 'Close');
@@ -36,10 +31,15 @@ if ($label !== false) {
 
 ?>
 
-
+<input type="hidden" id="<?= $inputOptions['id'] ?>" name="<?=  $inputOptions['name'] ?>" title="" >
+<input type="hidden" id="hidden_<?= $inputOptions['id'] ?>" name="hidden_<?=  $inputOptions['name'] ?>" title="" >
+<input type="hidden" id="x_<?= $inputOptions['id'] ?>" name="<?=  $inputOptions['name'] ?>[x]" />
+<input type="hidden" id="y_<?= $inputOptions['id'] ?>" name="<?=  $inputOptions['name'] ?>[y]" />
+<input type="hidden" id="w_<?= $inputOptions['id'] ?>" name="<?= $inputOptions['name'] ?>[w]" />
+<input type="hidden" id="h_<?= $inputOptions['id'] ?>" name="<?= $inputOptions['name'] ?>[h]" />
 <div class="cropper-container clearfix">
 
-    <input type="text" id="<?= $inputOptions['id'] ?>" name="<?=  $inputOptions['name'] ?>" title="" class="hidden">
+    
 
     <?= Html::button($browseLabel, [
         'class' => 'btn btn-primary',
@@ -54,9 +54,13 @@ if ($label !== false) {
         <div class="cropper-result" id="cropper-result-<?= $unique ?>" style="margin-top: 10px; width: <?= $preview['width'] ?>px; height: <?= $preview['height'] ?>px; border: 1px dotted #bfbfbf">
             <?php if (isset($preview['url'])) {
                 echo Html::img($preview['url'], ['width' => $preview['width'], 'height' => $preview['height']]);
-            } ?>
+                
+            } 
+           
+            ?>
         </div>
     <?php endif; ?>
+   
 </div>
 
 <?php $this->registerCss('
@@ -175,8 +179,28 @@ $this->registerJs(<<<JS
             return;
         }               
         options_$unique.element._image.src = URL.createObjectURL(event.target.files[0]);
-        
-        
+       //$('#hidden_personalfoto-image').val(event.target.files[0]);
+        var xhr = new XMLHttpRequest;
+       xhr.responseType = 'blob';
+
+xhr.onload = function() {
+   var recoveredBlob = xhr.response;
+
+   var reader = new FileReader;
+
+   reader.onload = function() {
+     var blobAsDataUrl = reader.result;
+    // window.location = blobAsDataUrl;
+     $('#hidden_personalfoto-image').val(blobAsDataUrl);
+   };
+
+   reader.readAsDataURL(recoveredBlob);
+    
+};
+
+xhr.open('GET', options_$unique.element._image.src);
+xhr.send();
+
         // cropper start
         options_$unique.element.image.cropper({
             aspectRatio: $aspectRatio,
@@ -192,8 +216,13 @@ $this->registerJs(<<<JS
                 options_$unique.inputData.width.val(Math.round(e.width));
                 options_$unique.inputData.height.val(Math.round(e.height));
                 options_$unique.inputData.X.val(Math.round(e.x));
-                options_$unique.inputData.Y.val(Math.round(e.y));                
+                options_$unique.inputData.Y.val(Math.round(e.y));      
+
+                $('#x_personalfoto-image').val(Math.round(e.x));
+                $('#y_personalfoto-image').val(Math.round(e.y));
                 
+                $('#w_personalfoto-image').val(Math.round(e.width));
+                $('#h_personalfoto-image').val(Math.round(e.height));
                 
                 if (options_$unique.data.width < options_$unique.data.cropWidth) {
                     options_$unique.element.modal.find('.width-warning').removeClass('has-success').addClass('has-error');
@@ -225,9 +254,10 @@ $this->registerJs(<<<JS
             width: options_$unique.data.cropWidth,
             height: options_$unique.data.cropHeight
         });
+        
         options_$unique.element.result.html('<img src="' + options_$unique.croppedCanvas.toDataURL() + '">');
         
-        options_$unique.input.model.attr('type', 'text');
+        //options_$unique.input.model.attr('type', 'text');
         options_$unique.input.model.val(options_$unique.croppedCanvas.toDataURL());
     }
     

@@ -136,7 +136,7 @@
 
     function isCrossOriginURL(url) {
         var parts = url.match(/^(https?:)\/\/([^\:\/\?#]+):?(\d*)/i);
-
+       
         return parts && (
                 parts[1] !== location.protocol ||
                 parts[2] !== location.hostname ||
@@ -610,6 +610,7 @@
 
             this.crossOrigin = crossOrigin;
             this.crossOriginUrl = crossOriginUrl;
+            
             this.$clone = $clone = $('<img' + getCrossOrigin(crossOrigin) + ' src="' + (crossOriginUrl || url) + '">');
 
             if (this.isImg) {
@@ -1227,7 +1228,7 @@
             var crossOrigin = getCrossOrigin(this.crossOrigin);
             var url = crossOrigin ? this.crossOriginUrl : this.url;
             var $clone2;
-
+           
             this.$preview = $(this.options.preview);
             this.$clone2 = $clone2 = $('<img' + crossOrigin + ' src="' + url + '">');
             this.$viewBox.html($clone2);
