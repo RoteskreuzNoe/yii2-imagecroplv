@@ -180,21 +180,27 @@ $this->registerJs(<<<JS
         }               
         options_$unique.element._image.src = URL.createObjectURL(event.target.files[0]);
        //$('#hidden_personalfoto-image').val(event.target.files[0]);
-        var xhr = new XMLHttpRequest();
+        var xhr = new XMLHttpRequest;
         xhr.open('GET', options_$unique.element._image.src);
-        xhr.responseType = 'blob';
+       xhr.responseType = 'blob';
 
-        xhr.onload = function() {
-            var recoveredBlob = xhr.response;
-            var reader = new FileReader;
-            reader.onload = function() {
-            var blobAsDataUrl = reader.result;
-            // window.location = blobAsDataUrl;
-            $('#hidden_personalfoto-image').val(blobAsDataUrl);
-        };
-       reader.readAsDataURL(recoveredBlob);
-    };
-    xhr.send();
+xhr.onload = function() {
+   var recoveredBlob = xhr.response;
+
+   var reader = new FileReader;
+
+   reader.onload = function() {
+     var blobAsDataUrl = reader.result;
+    // window.location = blobAsDataUrl;
+     $('#hidden_personalfoto-image').val(blobAsDataUrl);
+   };
+
+   reader.readAsDataURL(recoveredBlob);
+    
+};
+
+
+xhr.send();
 
         // cropper start
         options_$unique.element.image.cropper({
