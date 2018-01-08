@@ -94,7 +94,8 @@ class Cropper extends InputWidget
         if (!isset($options['icons']['browse'])) $options['icons']['browse'] = '<i class="fa fa-image"></i>';
         if (!isset($options['icons']['crop'])) $options['icons']['crop'] = '<i class="fa fa-crop"></i>';
         if (!isset($options['icons']['close'])) $options['icons']['close'] = '<i class="fa fa-crop"></i>';
-
+        if (!isset($options['icons']['rotate-left'])) $options['icons']['rotate-left'] = '<i class="fa fa-rotate-left"></i>';
+        if (!isset($options['icons']['rotate-right'])) $options['icons']['rotate-right'] = '<i class="fa fa-rotate-right"></i>';
         $this->cropperOptions = $options;
     }
 

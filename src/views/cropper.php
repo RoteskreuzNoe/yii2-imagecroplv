@@ -37,6 +37,7 @@ if ($label !== false) {
 <input type="hidden" id="y_<?= $inputOptions['id'] ?>" name="<?=  $inputOptions['name'] ?>[y]" />
 <input type="hidden" id="w_<?= $inputOptions['id'] ?>" name="<?= $inputOptions['name'] ?>[w]" />
 <input type="hidden" id="h_<?= $inputOptions['id'] ?>" name="<?= $inputOptions['name'] ?>[h]" />
+<input type="hidden" id="r_<?= $inputOptions['id'] ?>" name="<?= $inputOptions['name'] ?>[r]" />
 <div class="cropper-container clearfix">
 
     
@@ -218,12 +219,13 @@ xhr.send();
                 options_$unique.inputData.height.val(Math.round(e.height));
                 options_$unique.inputData.X.val(Math.round(e.x));
                 options_$unique.inputData.Y.val(Math.round(e.y));      
-
+                
                 $('#x_personalfoto-image').val(Math.round(e.x));
                 $('#y_personalfoto-image').val(Math.round(e.y));
                 
                 $('#w_personalfoto-image').val(Math.round(e.width));
                 $('#h_personalfoto-image').val(Math.round(e.height));
+                $('#r_personalfoto-image').val(e.rotate);
                 
                 if (options_$unique.data.width < options_$unique.data.cropWidth) {
                     options_$unique.element.modal.find('.width-warning').removeClass('has-success').addClass('has-error');
@@ -236,6 +238,7 @@ xhr.send();
                 } else {
                     options_$unique.element.modal.find('.height-warning').removeClass('has-error').addClass('has-success');                     
                 }
+                
             }, 
             
             built: function () {
