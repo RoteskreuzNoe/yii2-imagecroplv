@@ -30,7 +30,6 @@ if ($label !== false) {
 }
 
 ?>
-
 <input type="hidden" id="<?= $inputOptions['id'] ?>" name="<?=  $inputOptions['name'] ?>" title="" >
 <input type="hidden" id="hidden_<?= $inputOptions['id'] ?>" name="hidden_<?=  $inputOptions['name'] ?>" title="" >
 <input type="hidden" id="x_<?= $inputOptions['id'] ?>" name="<?=  $inputOptions['name'] ?>[x]" />
@@ -40,7 +39,7 @@ if ($label !== false) {
 <input type="hidden" id="r_<?= $inputOptions['id'] ?>" name="<?= $inputOptions['name'] ?>[r]" />
 <div class="cropper-container clearfix">
 
-    
+
 
     <?= Html::button($browseLabel, [
         'class' => 'btn btn-primary',
@@ -55,13 +54,13 @@ if ($label !== false) {
         <div class="cropper-result" id="cropper-result-<?= $unique ?>" style="margin-top: 10px; width: <?= $preview['width'] ?>px; height: <?= $preview['height'] ?>px; border: 1px dotted #bfbfbf">
             <?php if (isset($preview['url'])) {
                 echo Html::img($preview['url'], ['width' => $preview['width'], 'height' => $preview['height']]);
-                
-            } 
-           
+
+            }
+
             ?>
         </div>
     <?php endif; ?>
-   
+
 </div>
 
 <?php $this->registerCss('
@@ -320,4 +319,4 @@ xhr.send();
     });
     
 JS
-, View::POS_END) ?>
+    , View::POS_END) ?>
